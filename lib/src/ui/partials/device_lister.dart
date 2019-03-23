@@ -5,6 +5,7 @@ class DeviceLister extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView(
+      physics: NeverScrollableScrollPhysics(),
       padding: EdgeInsets.only(top: 10, bottom: 10),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
