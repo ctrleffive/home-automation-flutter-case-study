@@ -1,3 +1,4 @@
+import 'package:automation/src/ui/partials/device_lister.dart';
 import 'package:flutter/material.dart';
 
 import 'package:automation/src/ui/layouts/bgwrap.dart';
@@ -46,6 +47,7 @@ class Home extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   OverviewDetails(),
+                  DeviceLister(),
                 ],
               ),
             ),
