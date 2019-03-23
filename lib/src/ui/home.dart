@@ -24,16 +24,15 @@ class Home extends StatelessWidget {
                         backgroundImage: AssetImage('assets/images/user.jpg'),
                         radius: 28,
                       ),
-                      SizedBox(height: 15),
+                      SizedBox(height: 20),
                       Text('Welcome Home', style: TextStyle(
                         color: Colors.white70,
                         fontSize: 15
                       )),
-                      SizedBox(height: 8),
+                      SizedBox(height: 5),
                       Text('Living Room', style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white
                       )),
                     ],
                   ),
@@ -42,10 +41,13 @@ class Home extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(
-            child: Column(
-              children: <Widget>[
-                OverviewDetails()
-              ],
+            child: Padding(
+              padding: EdgeInsets.all(30),
+              child: Column(
+                children: <Widget>[
+                  OverviewDetails(),
+                ],
+              ),
             ),
           ),
         ],

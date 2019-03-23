@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class BGWrap extends StatelessWidget {
-  @required final Widget body;
+  final Widget body;
 
-  BGWrap({this.body});
+  BGWrap({@required this.body});
 
   @override
   Widget build(BuildContext context) {
