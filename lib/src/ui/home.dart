@@ -17,7 +17,7 @@ class Home extends StatelessWidget {
               centerTitle: false,
               background: SafeArea(
                 child: Padding(
-                  padding: EdgeInsets.only(top: 20, left: 30),
+                  padding: EdgeInsets.only(top: 20, left: 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -43,7 +43,7 @@ class Home extends StatelessWidget {
           ),
           SliverToBoxAdapter(
             child: Padding(
-              padding: EdgeInsets.all(30),
+              padding: EdgeInsets.all(20),
               child: Column(
                 children: <Widget>[
                   OverviewDetails(),
