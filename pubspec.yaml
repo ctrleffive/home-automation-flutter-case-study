@@ -21,3 +21,4 @@ flutter:
   assets:
    - assets/images/user.jpg
    - assets/images/blur-bg.jpg
+   - assets/images/ruler.png

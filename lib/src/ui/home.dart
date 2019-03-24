@@ -1,3 +1,4 @@
+import 'package:automation/src/ui/partials/device_adjustable.dart';
 import 'package:automation/src/ui/partials/device_lister.dart';
 import 'package:flutter/material.dart';
 
@@ -43,10 +44,11 @@ class Home extends StatelessWidget {
           ),
           SliverToBoxAdapter(
             child: Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.fromLTRB(20, 5, 20, 20),
               child: Column(
                 children: <Widget>[
                   OverviewDetails(),
+                  DeviceAdjustable(),
                   DeviceLister(),
                 ],
               ),

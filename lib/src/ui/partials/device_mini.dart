@@ -20,7 +20,7 @@ class DeviceMini extends StatelessWidget {
                 backgroundColor: Theme.of(context).primaryColor.withOpacity(0.1),
                 child: Icon(Icons.lightbulb_outline, color: Theme.of(context).primaryColor)
               ),
-              Icon(Icons.arrow_drop_down_circle, color: Colors.greenAccent, size: 18),
+              CircleAvatar(backgroundColor: Colors.greenAccent, radius: 5)
             ],
           ),
           Column(
