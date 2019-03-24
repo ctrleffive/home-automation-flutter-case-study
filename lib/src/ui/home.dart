@@ -49,36 +49,6 @@ class Home extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   OverviewDetails(),
-                  GridView(
-                    physics: NeverScrollableScrollPhysics(),
-                    padding: EdgeInsets.only(top: 10, bottom: 10),
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10,
-                    ),
-                    shrinkWrap: true,
-                    children: <Widget>[
-                      DeviceMini(
-                        icon: Icons.live_tv,
-                        itemName: 'Television',
-                      ),
-                      DeviceMini(
-                        icon: Icons.filter_b_and_w,
-                        itemName: 'Fridge',
-                        state: false,
-                      ),
-                      DeviceMini(
-                        icon: Icons.lightbulb_outline,
-                        itemName: 'Lamp',
-                        state: true,
-                      ),
-                      DeviceMini(
-                        icon: Icons.hot_tub,
-                        itemName: 'Heater',
-                      ),
-                    ],
-                  ),
                   DeviceAdjustable(
                     itemName: 'Bedroom Light',
                     sliderLabel: 'Brightness',
@@ -93,6 +63,15 @@ class Home extends StatelessWidget {
                     ),
                     shrinkWrap: true,
                     children: <Widget>[
+                      DeviceMini(
+                        icon: Icons.lightbulb_outline,
+                        itemName: 'Lamp',
+                        state: true,
+                      ),
+                      DeviceMini(
+                        icon: Icons.hot_tub,
+                        itemName: 'Heater',
+                      ),
                       DeviceMini(
                         icon: Icons.radio,
                         itemName: 'Radio',
