@@ -1,6 +1,5 @@
 import 'package:automation/src/ui/partials/device_adder_mini.dart';
 import 'package:automation/src/ui/partials/device_adjustable.dart';
-import 'package:automation/src/ui/partials/device_lister.dart';
 import 'package:automation/src/ui/partials/device_mini.dart';
 import 'package:flutter/material.dart';
 
@@ -50,8 +49,6 @@ class Home extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   OverviewDetails(),
-                  DeviceLister(),
-                  DeviceAdjustable(),
                   GridView(
                     physics: NeverScrollableScrollPhysics(),
                     padding: EdgeInsets.only(top: 10, bottom: 10),
@@ -62,7 +59,45 @@ class Home extends StatelessWidget {
                     ),
                     shrinkWrap: true,
                     children: <Widget>[
-                      DeviceMini(),
+                      DeviceMini(
+                        icon: Icons.live_tv,
+                        itemName: 'Television',
+                      ),
+                      DeviceMini(
+                        icon: Icons.filter_b_and_w,
+                        itemName: 'Fridge',
+                        state: false,
+                      ),
+                      DeviceMini(
+                        icon: Icons.lightbulb_outline,
+                        itemName: 'Lamp',
+                        state: true,
+                      ),
+                      DeviceMini(
+                        icon: Icons.hot_tub,
+                        itemName: 'Heater',
+                      ),
+                    ],
+                  ),
+                  DeviceAdjustable(
+                    itemName: 'Bedroom Light',
+                    sliderLabel: 'Brightness',
+                  ),
+                  GridView(
+                    physics: NeverScrollableScrollPhysics(),
+                    padding: EdgeInsets.only(top: 10, bottom: 10),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
+                    ),
+                    shrinkWrap: true,
+                    children: <Widget>[
+                      DeviceMini(
+                        icon: Icons.radio,
+                        itemName: 'Radio',
+                        state: true,
+                      ),
                       DeviceAdderMini(),
                     ],
                   )

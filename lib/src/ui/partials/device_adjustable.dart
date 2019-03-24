@@ -2,6 +2,14 @@ import 'package:automation/src/ui/partials/gradient_slider.dart';
 import 'package:flutter/material.dart';
 
 class DeviceAdjustable extends StatelessWidget {
+  final String itemName;
+  final String sliderLabel;
+
+  DeviceAdjustable({
+    @required this.itemName,
+    @required this.sliderLabel
+  });
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,8 +25,8 @@ class DeviceAdjustable extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text('TV', style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold, fontSize: 18)),
-              Text('Brightness', style: TextStyle(color: Colors.black54, fontSize: 14)),
+              Text(this.itemName, style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold, fontSize: 18)),
+              Text(this.sliderLabel, style: TextStyle(color: Colors.black54, fontSize: 14)),
             ],
           ),
           SizedBox(height: 20),
